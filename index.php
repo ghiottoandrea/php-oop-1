@@ -1,11 +1,8 @@
 <?php
 
-class Production{
+require_once __DIR__  . '/models/Production.php';
 
-    public $title;
-    public $language;
-    public $vote;
+$firstProduction = new Production('First Product', 'italian', '5');
+$secondProduction = new Production('Second Product', 'french', '2');
 
-    public function __construct(public string $title, public string $language, public string $vote)
-
-}
+var_dump($firstProduction, $secondProduction);
