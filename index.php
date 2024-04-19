@@ -2,15 +2,22 @@
 
 require_once __DIR__  . '/models/Production.php';
 require_once __DIR__  . '/models/Movie.php';
-require_once __DIR__  . '/models/TVserie.php';
+require_once __DIR__  . '/models/TVSerie.php';
 
 
 $productions = [
-    new Production('Avangers', 'en', '7'),
-    new Production('Star Wars', 'en', '8')
+    new Production('One Piece Red', 'jp', '9'),
+    new Production('Ready Player One', 'en', '10'),
+
+    new Movie('Avengers', 'en', '7', '1.5 md', '1h 43m'),
+    new Movie('Jumanji', 'en', '9', '962 ml', '1h 59m'),
+
+    new TVSerie('How I Met Your Mother', 'en', '10', '9'),
+    new TVSerie('Big Bang Theory', 'en', '10', '12')
+
 ];
 
-//var_dump($productions);
+var_dump($productions);
 
 ?>
 
@@ -44,6 +51,19 @@ $productions = [
                 <div>
                     <span>Voto: </span>
                     <span> <?= $product->vote ?> su 10 </span>
+                </div>
+
+                <div>
+                    <span>Profitti: </span>
+                    <span> <?= $product->profits ?> </span>
+                </div>
+                <div>
+                    <span>Durata: </span>
+                    <span> <?= $product->duration ?> </span>
+                </div>
+                <div>
+                    <span>Stagioni: </span>
+                    <span> <?= $product->numbSeasons ?> </span>
                 </div>
 
             </div>
